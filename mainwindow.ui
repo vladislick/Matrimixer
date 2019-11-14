@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>722</width>
+    <height>429</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Matrimixer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,1">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Select operation:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_MainOperation">
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+        </property>
+        <property name="minimumContentsLength">
+         <number>40</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Find the Determinant of the Matrix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Find the Inverse Matrix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Transpose Matrix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bring the matrix to step form</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Make the matrix triangular</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Add Matrix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Subtract Matrix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Multiply Matrix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Split Matrix</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Other</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelNotice">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Notice:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEditMatrixExpressions">
+      <property name="placeholderText">
+       <string>Here you can enter matrix expressions</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelResult">
+      <property name="text">
+       <string>Result:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layoutMain"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QDockWidget" name="dockMatrices">
+   <property name="features">
+    <set>QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>Matrix List</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContents</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>228</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>No Variables</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>722</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_Matrimixer"/>
+   </widget>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="action_Matrimixer">
+   <property name="text">
+    <string>О приложении Matrimixer</string>
+   </property>
+  </action>
+  <action name="actionAbout_Matrimixer">
+   <property name="text">
+    <string>About Matrimixer</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
